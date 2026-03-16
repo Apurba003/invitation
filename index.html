@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srijit & Aditi's Wedding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <!-- Particles.js for rich background -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Vanilla Tilt for 3D Hover Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <h2 class="loader-names">A & M</h2>
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!-- Interactive Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="logo">Arijti & Munmun</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <img src="C:\Users\apurb\Downloads\anti\bengali-wedding\assets\mandala rb.png" alt="Mandala" class="mandala-img hero-mandala">
+            <p class="pre-title" id="typed-pre-title">Join us to celebrate the wedding of</p>
+            <h1 class="names glow-text shimmer-effect">Arijit & Munmun</h1>
+            <p class="date">Save the Date <br> <span class="highlight shimmer-effect">3 May,2026</span></p>
+            <img src="C:\Users\apurb\Downloads\anti\bengali-wedding\assets\couple_silhouette_1773663305788.png" alt="Couple" class="couple-silhouette">
+        </div>
+        
+        <!-- Animated Scroll Down Indicator -->
+        <a href="#countdown-section" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- Countdown Section -->
+    <section id="countdown-section" class="countdown-section">
+        <div class="section-header">
+            <h2 class="title">The Big Day Is Almost Here</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="countdown-wrapper">
+            <div class="time-box">
+                <span id="days" class="time">00</span>
+                <span class="label">Days</span>
+            </div>
+            <div class="time-box">
+                <span id="hours" class="time">00</span>
+                <span class="label">Hours</span>
+            </div>
+            <div class="time-box">
+                <span id="minutes" class="time">00</span>
+                <span class="label">Minutes</span>
+            </div>
+            <div class="time-box">
+                <span id="seconds" class="time">00</span>
+                <span class="label">Seconds</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events-section">
+        <div class="section-header">
+            <h2 class="title">Wedding Events</h2>
+            <div class="divider"></div>
+            <p class="subtitle">Join us in the beautiful traditions of a Bengali wedding.</p>
+        </div>
+
+        <div class="events-container">
+            <!-- Blessing ceremony -->
+            <div class="event-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.5">
+                <div class="event-icon"><i class="fas fa-om"></i></div>
+                <h3 class="event-title">Blessing ceremony</h3>
+                <p class="event-date"><span class="date-text">1st May, 2026</span> <span class="date-time">| 10:00 AM</span></p>
+                <p class="event-venue">Bride's Residence</p>
+                <p class="event-desc">The elders of both families come together to bless the bride and groom for their new life journey.</p>
+            </div>
+
+            <!-- haldi function -->
+            <div class="event-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.5">
+                <div class="event-icon"><i class="fas fa-sun"></i></div>
+                <h3 class="event-title">haldi function</h3>
+                <p class="event-date"><span class="date-text">2nd May, 2026</span> <span class="date-time">| 11:00 AM</span></p>
+                <p class="event-venue">Sukh Sagar Banquet</p>
+                <p class="event-desc">A vibrant and joyous ceremony where turmeric paste is applied to the bride and groom, bringing a beautiful glow.</p>
+            </div>
+
+            <!-- wedding -->
+            <div class="event-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.5">
+                <div class="event-icon"><i class="fas fa-ring"></i></div>
+                <h3 class="event-title">wedding</h3>
+                <p class="event-date"><span class="date-text">3rd May, 2026</span> <span class="date-time">| 7:00 PM</span></p>
+                <p class="event-venue">Sukh Sagar Venue</p>
+                <p class="event-desc">The most awaited moment! Witness the holy matrimony and beautiful Bengali wedding rituals under the twinkling stars.</p>
+            </div>
+
+            <!-- Reception -->
+            <div class="event-card" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.5">
+                <div class="event-icon"><i class="fas fa-glass-cheers"></i></div>
+                <h3 class="event-title">Reception</h3>
+                <p class="event-date"><span class="date-text">5th May, 2026</span> <span class="date-time">| 7:30 PM</span></p>
+                <p class="event-venue">Grand Heritage Resort</p>
+                <p class="event-desc">Celebrate the newlyweds with a grand feast and an evening full of laughter, love, and music.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venue Section -->
+    <section id="venue" class="venue-section">
+        <div class="section-header">
+            <h2 class="title">Wedding Venue</h2>
+            <div class="divider"></div>
+            <p class="subtitle">Join us to celebrate our special day at this wonderful location.</p>
+        </div>
+        
+        <div class="venue-container">
+            <div class="venue-info">
+                <div class="venue-icon-wrapper"><i class="fas fa-map-marker-alt venue-icon"></i></div>
+                <h3 class="venue-title">Sukh Sagar</h3>
+                <p class="venue-address">Find us using the interactive Google Map below.</p>
+                <a href="https://www.google.com/maps/place/Sukh+Sagar/@22.7387387,88.461047,14z/data=!4m6!3m5!1s0x375373f586f226cd:0xdd8d3b88b7849b1c!8m2!3d23.26113!4d91.4666594!16s%2Fg%2F11yk7rwjfw?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="drive-btn venue-btn">
+                    Open in Google Maps <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+            <div class="venue-map">
+                <iframe src="https://maps.google.com/maps?q=23.26113,91.4666594&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photos/Gallery Drive Section -->
+    <section id="gallery" class="drive-section">
+        <div class="section-header">
+            <h2 class="title">Capture & Share Memories</h2>
+            <div class="divider"></div>
+            <p class="subtitle">Access event photos and share the moments you clicked with us!</p>
+        </div>
+        
+        <div class="drive-container">
+            <div class="drive-content">
+                <i class="fab fa-google-drive drive-icon"></i>
+                <h3>Wedding Photo Gallery</h3>
+                <p>Click below to access all the high-quality vibrant photos from all our wedding events.</p>
+                <a href="https://drive.google.com/drive/u/2/folders/1SU55dzBOhn2_D7z9ZWvLn69amkvIFXZL" target="_blank" class="cyber-button drive-btn">
+                    Access Google Drive <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h2 class="footer-names">Arijit & Munmun</h2>
+            <p>Made with ❤️ for our special day.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
